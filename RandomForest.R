@@ -15,7 +15,6 @@ data$Group <- group$group
 
 cvlist <- createFolds(data$Group, k = 5, list = TRUE, returnTrain = FALSE)
 k <- 5
-accuracy <- data.frame()
 prediction_all <- data.frame()
 test_all <- data.frame()
 for (i in 1:k){
