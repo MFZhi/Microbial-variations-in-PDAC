@@ -9,7 +9,7 @@ library(dplyr)
 set.seed(123)
 spp<-read.csv('Species_count.csv',head=T,stringsAsFactors=F,row.names=1)
 spp <- spp[-560,]
-Group <- read.xlsx("group.xlsx",sheetIndex = 1)#group为分组信息
+Group <- read.xlsx("group.xlsx",sheetIndex = 1)
 Group <- Group%>%filter(Group$group=='Control')
 group_1 <- Group%>%filter(Group$site=='duodenum')
 group_2 <- Group%>%filter(Group$site=='oral')
