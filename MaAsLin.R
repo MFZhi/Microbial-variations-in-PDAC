@@ -4,7 +4,7 @@ library(xlsx)
 library(dplyr)
 set.seed(123)
 
-Group <- read.xlsx("group.xlsx",sheetIndex = 1)#group为分组信息
+Group <- read.xlsx("group.xlsx",sheetIndex = 1)
 Group <- Group%>%filter(Group$site=='duodenum')#'pancreas' 'oral'
 data<-read.csv('species_relative.csv',head=T,stringsAsFactors=F,row.names=1)
 data <- data[-560,]
