@@ -4,7 +4,7 @@ library(reshape2)
 library(ggplot2)
 set.seed(123)
 species <-read.csv('species_relative.csv',head=T,stringsAsFactors=F,row.names=1)
-Group <- read.xlsx("group.xlsx",sheetIndex = 1)#group为分组信息
+Group <- read.xlsx("group.xlsx",sheetIndex = 1)
 Group <- Group%>%filter(Group$group=='Control')#'Case'
 group_1 <- Group%>%filter(Group$site=='duodenum')
 group_2 <- Group%>%filter(Group$site=='oral')
